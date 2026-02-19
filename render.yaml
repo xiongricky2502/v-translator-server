@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: v-translator-api
+    env: python
+    region: singapore          # 选新加坡节点，离越南/中国最近，延迟低
+    plan: free                 # 免费套餐
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PORT
+        value: 8000
+    # 免费套餐说明：
+    # - 每月 750 小时运行时间（够用）
+    # - 不活跃 15 分钟后休眠，第一次请求需等 30-60 秒冷启动
+    # - 如要避免休眠，可用 UptimeRobot 每 10 分钟 ping 一次
