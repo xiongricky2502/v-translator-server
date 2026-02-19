@@ -29,7 +29,7 @@ app.add_middleware(
 # "small" 模型约 244MB，越南语识别效果好，速度可接受
 # 可选: "tiny"(75MB,快), "small"(244MB,推荐), "medium"(769MB,最准)
 print("正在加载 Whisper 模型，请稍候...")
-whisper_model = whisper.load_model("small")
+whisper_model = whisper.load_model("tiny")
 print("Whisper 模型加载完成 ✅")
 
 # LibreTranslate 公共实例（免费，无需Key）
