@@ -5,4 +5,3 @@ uvicorn==0.29.0
 faster-whisper
 httpx==0.27.0
 python-multipart==0.0.9
-torch --index-url https://download.pytorch.org/whl/cpu
